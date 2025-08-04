@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- 即座にリダイレクト (0秒後) -->
-<meta http-equiv="refresh" content="0;url=https://database-app-6ms4.onrender.com/product_register">
+<!-- 30秒後にリダイレクト -->
+<meta http-equiv="refresh" content="30;url=https://database-app-6ms4.onrender.com/product_register">
 <title>リダイレクト中...</title>
 <!-- PWA設定 -->
 <link rel="manifest" href="manifest.json">
@@ -15,8 +15,10 @@
 <body>
 <div>リダイレクト中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
 <script>
-// 即座にJavaScriptでもリダイレクト
-location.href="https://database-app-6ms4.onrender.com/product_register";
+// 30秒後にJavaScriptでリダイレクト
+setTimeout(function(){
+  location.href="https://database-app-6ms4.onrender.com/product_register";
+}, 30000);
 // Service Worker登録（PWA用）
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('sw.js').catch(()=>{});
