@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- 即座にリダイレクト (0秒後) -->
-<meta http-equiv="refresh" content="0;url=https://database-app-6ms4.onrender.com/product_register">
-<title>リダイレクト中...</title>
-<!-- PWA設定 -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#333333">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'></svg>">
-<style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a{color:#fff}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid with Buttons</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+  <link rel="manifest" href="manifest.json">
+  <style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a{color:#fff}</style>
 </head>
 <body>
-<div>リダイレクト中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
+<div>自動クリック中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
+
 <script>
-// 即座にJavaScriptでもリダイレクト
-location.href="https://database-app-6ms4.onrender.com/product_register";
-// Service Worker登録（PWA用）
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js').catch(()=>{});
+// 自動クリック機能 - 設置済みリンクを0秒で自動クリック
+function autoClickProductRegister() {
+  const link = document.querySelector('a');
+  if (link) {
+    link.click();
+  }
 }
+
+// ページ読み込み時に自動クリックを実行
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(autoClickProductRegister, 0);
+});
 </script>
+
 </body>
 </html>

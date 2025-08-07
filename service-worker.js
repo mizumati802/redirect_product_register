@@ -1,21 +1,18 @@
-// PWA用Service Worker - 最小限の正常動作版
-const CACHE_NAME = 'product-register-pwa-cache-v1';
+const CACHE_NAME = 'new-dashboard-cache-v1';
+const urlsToCache = [
+  '/new_dashboard_app/index.html',
+  '/new_dashboard_app/manifest.json',
+  '/new_dashboard_app/icon-192x192.png',
+  '/new_dashboard_app/icon-512x512.png'
+];
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/manifest.json',
-        '/icon-192x192.png'
-      ]);
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
   );
 });
 
 self.addEventListener('fetch', event => {
-  // 【重要】fetchイベントを正常に処理（空実装は危険）
   event.respondWith(
     caches.match(event.request).then(response => {
       return response || fetch(event.request);
