@@ -1,78 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Grid with Buttons</title>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('Service Worker registered'))
-        .catch(err => console.error('Service Worker registration failed:', err));
-    }
-  </script>
-  <link rel="manifest" href="manifest.json">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f4f4f4;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      width: 90%;
-      max-width: 400px;
-    }
-
-    .grid-item {
-      aspect-ratio: 2 / 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .button {
-      width: 100%;
-      height: 100%;
-      font-size: 20pt;
-      font-weight: bold;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.2s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #d45555;
-    }
-
-    .button:hover {
-      transform: scale(1.05);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- 即座にリダイレクト (0秒後) -->
+<meta http-equiv="refresh" content="0;url=https://database-app-6ms4.onrender.com/product_register">
+<title>リダイレクト中...</title>
+<!-- PWA設定 -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#333333">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'></svg>">
+<style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a{color:#fff}</style>
 </head>
 <body>
-  <div class="grid">
-    <div class="grid-item">
-      <a href="https://database-app-6ms4.onrender.com/product_register" target="_blank" class="button">
-        <button class="button">商品登録</button>
-      </a>
-    </div>
-  </div>
+<div>リダイレクト中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
+<script>
+// 即座にJavaScriptでもリダイレクト
+location.href="https://database-app-6ms4.onrender.com/product_register";
+// Service Worker登録（PWA用）
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
+</script>
 </body>
 </html>
