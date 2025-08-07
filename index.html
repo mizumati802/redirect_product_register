@@ -13,25 +13,66 @@
     }
   </script>
   <link rel="manifest" href="manifest.json">
-  <style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a{color:#fff}</style>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .grid-item {
+      aspect-ratio: 2 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .button {
+      width: 100%;
+      height: 100%;
+      font-size: 20pt;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #d45555;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-<div>自動クリック中...<br><a href="https://database-app-6ms4.onrender.com/product_register" target="_blank">手動で移動</a></div>
-
-<script>
-// 自動クリック機能 - 設置済みリンクを0秒で自動クリック
-function autoClickProductRegister() {
-  const link = document.querySelector('a');
-  if (link) {
-    link.click();
-  }
-}
-
-// ページ読み込み時に自動クリックを実行
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(autoClickProductRegister, 0);
-});
-</script>
-
+  <div class="grid">
+    <div class="grid-item">
+      <a href="https://database-app-6ms4.onrender.com/product_register" target="_blank" class="button">
+        <button class="button">商品登録</button>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
