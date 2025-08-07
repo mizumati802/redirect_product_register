@@ -3,33 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Product Register</title>
+<!-- 即座にリダイレクト (0秒後) -->
+<meta http-equiv="refresh" content="0;url=https://database-app-6ms4.onrender.com/product_register">
+<title>リダイレクト中...</title>
 <!-- PWA設定 -->
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#333333">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'></svg>">
-<style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a{color:#fff}button{background:none;border:1px solid #fff;color:#fff;padding:10px 20px;cursor:pointer;border-radius:4px;font:16px/1.4 sans-serif;margin-top:10px}button:hover{background:#fff;color:#333}</style>
+<style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a{color:#fff}</style>
 </head>
 <body>
-<div>
-  商品登録を開始します<br>
-  <button onclick="openProductRegister()">商品登録を開く</button><br>
-  <a href="https://database-app-6ms4.onrender.com/product_register" target="_blank">手動で移動</a>
-</div>
+<div>リダイレクト中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
 <script>
-// 別タブで商品登録を開く
-function openProductRegister() {
-  window.open('https://database-app-6ms4.onrender.com/product_register', '_blank');
-}
-
-// PWA起動時に即座に開く（0秒）
-window.addEventListener('load', function() {
-  openProductRegister();
-});
-
+// 即座にJavaScriptでもリダイレクト
+location.href="https://database-app-6ms4.onrender.com/product_register";
 // Service Worker登録（PWA用）
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('service-worker.js').catch(()=>{});
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 </script>
 </body>
