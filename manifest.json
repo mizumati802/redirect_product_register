@@ -1,8 +1,8 @@
 {
   "name": "new_dashboard",
   "short_name": "new_dashboard",
-  "start_url": "/new_dashboard_app/index.html",
-  "scope": "/new_dashboard_app/",
+  "start_url": "/redirect_product_register/index.html",
+  "scope": "/redirect_product_register/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",

@@ -1,9 +1,9 @@
-const CACHE_NAME = 'new-dashboard-cache-v1';
+const CACHE_NAME = 'redirect-product-register-cache-v1';
 const urlsToCache = [
-  '/new_dashboard_app/index.html',
-  '/new_dashboard_app/manifest.json',
-  '/new_dashboard_app/icon-192x192.png',
-  '/new_dashboard_app/icon-512x512.png'
+  '/redirect_product_register/index.html',
+  '/redirect_product_register/manifest.json',
+  '/redirect_product_register/icon-192x192.png',
+  '/redirect_product_register/icon-512x512.png'
 ];
 
 self.addEventListener('install', event => {
