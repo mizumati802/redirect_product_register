@@ -19,9 +19,12 @@
 <div>自動クリック中...<br><a href="https://database-app-6ms4.onrender.com/product_register" target="_blank">手動で移動</a></div>
 
 <script>
-// 自動クリック機能 - 新しいタブで開く方式に変更
+// 自動クリック機能 - 設置済みリンクを0秒で自動クリック
 function autoClickProductRegister() {
-  window.open('https://database-app-6ms4.onrender.com/product_register', '_blank');
+  const link = document.querySelector('a');
+  if (link) {
+    link.click();
+  }
 }
 
 // ページ読み込み時に自動クリックを実行
