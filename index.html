@@ -16,15 +16,12 @@
   <style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a{color:#fff}</style>
 </head>
 <body>
-<div>自動クリック中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
+<div>自動クリック中...<br><a href="https://database-app-6ms4.onrender.com/product_register" target="_blank">手動で移動</a></div>
 
 <script>
-// 自動クリック機能 - 設置済みリンクを0秒で自動クリック
+// 自動クリック機能 - 新しいタブで開く方式に変更
 function autoClickProductRegister() {
-  const link = document.querySelector('a');
-  if (link) {
-    link.click();
-  }
+  window.open('https://database-app-6ms4.onrender.com/product_register', '_blank');
 }
 
 // ページ読み込み時に自動クリックを実行
