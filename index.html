@@ -3,25 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- 即座にリダイレクト (0秒後) -->
-<meta http-equiv="refresh" content="0;url=https://database-app-6ms4.onrender.com/product_register">
 <title>リダイレクト中...</title>
-<!-- PWA設定 -->
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#333333">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'></svg>">
 <style>body{margin:0;background:#333;color:#fff;font:16px/1.4 sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}a,#stop{color:#fff;background:none;border:none;text-decoration:underline;cursor:pointer;font:inherit}#stop{position:fixed;bottom:20px}</style>
-</head>
-<body>
-<div>リダイレクト中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
-<button id="stop" onclick="window.stop();this.textContent='停止しました'">停止</button>
 <script>
-// 即座にJavaScriptでもリダイレクト
+// 即座にJavaScriptでリダイレクト（head内で最速実行）
 location.href="https://database-app-6ms4.onrender.com/product_register";
 // Service Worker登録（PWA用）
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 </script>
+</head>
+<body>
+<div>リダイレクト中...<br><a href="https://database-app-6ms4.onrender.com/product_register">手動で移動</a></div>
+<button id="stop" onclick="window.stop();this.textContent='停止しました'">停止</button>
 </body>
 </html>
